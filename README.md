@@ -1,14 +1,15 @@
-#nginx-cdn
+# nginx-cdn
+- [Helpful guide](https://dev.to/shashankpai/building-a-simple-cdn-with-nginx-and-docker-a-step-by-step-guide-lkg).
 
 To be used as cdn
 
 
-##Copy the existing nginx.conf file
+## Copy the existing nginx.conf file
 ```sh
 docker run --rm --entrypoint=cat nginx /etc/nginx/nginx.conf > nginx.conf
 ```
 
-##Run 
+## Run 
 
 ```sh
 mkdir -p html
