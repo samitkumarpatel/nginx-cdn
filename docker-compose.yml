@@ -1,0 +1,13 @@
+services:
+  nginx-origin:
+    image: nginx:latest
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./html:/usr/share/nginx/html:ro
+  edge:
+    image: nginx:latest
+    volumes:
+      - ./nginx-edge.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./html:/usr/share/nginx/html:ro
+    ports:
+      - "8080:80"
